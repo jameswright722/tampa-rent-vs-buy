@@ -292,7 +292,7 @@ function App() {
                   <textarea
                     name="lookingFor"
                     rows={3}
-                    placeholder="What are you looking for? (e.g., single family home with 3 beds/2 baths and a pool)"
+                    placeholder="What are you looking for? (e.g., singe family home with 3 bedrooms, 2 bathrooms, and private pool; high-rise condo with 2 bedrooms and 2 bathrooms)"
                   />
                   {/* Hidden spam trap: real visitors never see or fill this */}
                   <input
