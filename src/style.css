@@ -68,6 +68,9 @@ label {
   color: #828282;
   align-self: center;
 }
+.input .prefix + input {
+  padding-left: 4px;
+}
 .results {
   display: grid;
   gap: 18px;
@@ -89,6 +92,9 @@ label {
 .green {
   color: #16a34a;
 }
+.red {
+  color: #ce011f
+}
 .row {
   display: flex;
   justify-content: space-between;
@@ -108,10 +114,16 @@ label {
   gap: 10px;
 }
 .lead input,
-.lead select {
+.lead select,
+.lead textarea {
   padding: 11px;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+.lead textarea {
+  grid-column: 1/-1;
+  font: inherit;
+  resize: vertical;
 }
 .lead button {
   grid-column: 1/-1;
