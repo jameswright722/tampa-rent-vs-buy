@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #f7f7f7;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+header {
+  background: #ce011f;
+  color: white;
+  padding: 48px max(24px, calc((100% - 1100px) / 2));
+}
+header h1 {
+  font-size: 48px;
+  max-width: 750px;
+  margin: 16px 0;
+}
+header p {
+  font-size: 18px;
+  max-width: 700px;
+}
+main {
+  max-width: 1100px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 24px;
+  padding: 0 20px;
+}
+.card,
+.hero {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 18px;
+  padding: 24px;
+}
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.inputs h2,
+.inputs small {
+  grid-column: 1/-1;
+}
+label {
+  color: #4d4d4d;
+  font-size: 14px;
+  font-weight: 600;
+}
+.input {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-top: 5px;
+  background: white;
+}
+.input input {
+  width: 100%;
+  border: 0;
+  padding: 10px;
+  outline: 0;
+}
+.input span {
+  color: #828282;
+  align-self: center;
+}
+.results {
+  display: grid;
+  gap: 18px;
+}
+.hero {
+  background: #ce011f;
+  color: #fff;
+  border: 0;
+}
+.hero h2 {
+  font-size: 42px;
+  margin: 8px 0;
+}
+.twocol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.green {
+  color: #16a34a;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+.lead {
+  background: #fff5f6;
+  border-color: #f3b5be;
+}
+.lead svg {
+  color: #ce011f;
+}
+.lead form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.lead input,
+.lead select {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.lead button {
+  grid-column: 1/-1;
+  background: #ce011f;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 14px;
+  font-weight: 700;
+}
+footer {
+  text-align: center;
+  color: #828282;
+  padding: 20px 20px 40px;
+}
+@media (max-width: 760px) {
+  header h1 {
+    font-size: 36px;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  .inputs,
+  .twocol,
+  .lead form {
+    grid-template-columns: 1fr;
+  }
+  .lead button {
+    grid-column: auto;
+  }
+}
