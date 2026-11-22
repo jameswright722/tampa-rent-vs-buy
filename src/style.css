@@ -95,6 +95,10 @@ label {
 .red {
   color: #ce011f
 }
+.explain p {
+  line-height: 1.5;
+  color: #333;
+}
 .row {
   display: flex;
   justify-content: space-between;

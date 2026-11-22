@@ -70,9 +70,9 @@ function App() {
   const [rent, setRent] = useState(3500),
     [price, setPrice] = useState(500000),
     [down, setDown] = useState(20),
-    [rate, setRate] = useState(6.5),
+    [rate, setRate] = useState(7),
     [years, setYears] = useState(5),
-    [hoa, setHoa] = useState(300),
+    [hoa, setHoa] = useState(0),
     [taxPct, setTax] = useState(1.25),
     [insPct, setIns] = useState(0.9),
     [flood, setFlood] = useState(0),
@@ -126,7 +126,7 @@ function App() {
       "Current monthly rent": money(rent),
       "Target home price": money(price),
       "Down payment": `${down}%`,
-      "Mortgage rate": `${rate}%`,
+      "Estimated Mortgage Rate": `${rate}%`,
       "Property tax": `${taxPct}%/yr`,
       HOA: `${money(hoa)}/mo`,
       "Homeowners insurance": `${insPct}%/yr`,
@@ -194,13 +194,25 @@ function App() {
           <I l="Property tax estimate" v={taxPct} set={setTax} s="%/yr" />
           <I l="HOA" p="$" v={hoa} set={setHoa} s="/mo" />
           <I l="Homeowners insurance" v={insPct} set={setIns} s="%/yr" />
-          <I l="Flood insurance (opt.)" p="$" v={flood} set={setFlood} s="/mo" />
+          <I
+            l="Flood insurance (opt.)"
+            p="$"
+            v={flood}
+            set={setFlood}
+            s="/mo"
+          />
           <I l="Annual appreciation" v={app} set={setApp} s="%" />
           <I l="Compare over" v={years} set={setYears} s="years" />
           <small>
-            Illustrative estimate only. Taxes, insurance, HOA, mortgage
-            insurance, closing costs, maintenance, rent increases, tax benefits
-            and financing terms vary.
+            Mortgage calculations assume a 30-year fixed-rate mortgage using the
+            estimated rate. The fault rate is for illustrative purposes only and
+            is not a lender quote or offer of credit. Your actual rate and APR
+            may vary based on your financial profile, loan terms, lender,
+            property, and market conditions. Principal and interest are only
+            part of the potential cost of homeownership; property taxes,
+            homeowners insurance, flood insurance, HOA or condominium
+            assessments, mortgage insurance, maintenance, and other costs may
+            also apply.
           </small>
         </section>
         <section className="results">
@@ -220,6 +232,26 @@ function App() {
               <p>Illustrative equity after {years} years</p>
               <h2>{money(x.equity)}</h2>
             </div>
+          </div>
+          <div className="card explain">
+            <h2>What do these numbers mean?</h2>
+            <p>
+              <b>Rent paid over {years} years</b> represents the total amount
+              spent on rent during that period. Those payments provide housing
+              and the flexibility that comes with renting, but they do not
+              create an ownership interest in the property.
+            </p>
+            <p>
+              <b>Equity built over {years} years</b> represents the estimated
+              portion of the home’s value you would own at the end of that
+              period. Equity includes your initial down payment and may grow as
+              you pay down the mortgage and if the home increases in value.
+            </p>
+            <p>
+              <b>In simple terms:</b> Both renting and owning cost money. The
+              difference is that homeownership may allow part of your housing
+              spending to help build an asset you own over time.
+            </p>
           </div>
           <div className="card">
             <h2>Where the ownership payment goes</h2>
