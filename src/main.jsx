@@ -126,7 +126,7 @@ function App() {
       "Current monthly rent": money(rent),
       "Target home price": money(price),
       "Down payment": `${down}%`,
-      "Estimated Mortgage Rate": `${rate}%`,
+      "Estimated mortgage Rate": `${rate}%`,
       "Property tax": `${taxPct}%/yr`,
       HOA: `${money(hoa)}/mo`,
       "Homeowners insurance": `${insPct}%/yr`,
@@ -190,7 +190,7 @@ function App() {
           <I l="Current monthly rent" p="$" v={rent} set={setRent} s="/mo" />
           <I l="Target home price" p="$" v={price} set={setPrice} />
           <I l="Down payment" v={down} set={setDown} s="%" />
-          <I l="Estimated Mortgage rate" v={rate} set={setRate} s="%" />
+          <I l="Estimated mortgage rate" v={rate} set={setRate} s="%" />
           <I l="Property tax estimate" v={taxPct} set={setTax} s="%/yr" />
           <I l="HOA" p="$" v={hoa} set={setHoa} s="/mo" />
           <I l="Homeowners insurance" v={insPct} set={setIns} s="%/yr" />
