@@ -190,7 +190,7 @@ function App() {
           <I l="Current monthly rent" p="$" v={rent} set={setRent} s="/mo" />
           <I l="Target home price" p="$" v={price} set={setPrice} />
           <I l="Down payment" v={down} set={setDown} s="%" />
-          <I l="Mortgage rate" v={rate} set={setRate} s="%" />
+          <I l="Estimated Mortgage rate" v={rate} set={setRate} s="%" />
           <I l="Property tax estimate" v={taxPct} set={setTax} s="%/yr" />
           <I l="HOA" p="$" v={hoa} set={setHoa} s="/mo" />
           <I l="Homeowners insurance" v={insPct} set={setIns} s="%/yr" />
@@ -205,7 +205,7 @@ function App() {
           <I l="Compare over" v={years} set={setYears} s="years" />
           <small>
             Mortgage calculations assume a 30-year fixed-rate mortgage using the
-            estimated rate. The fault rate is for illustrative purposes only and
+            estimated rate. The default rate is for illustrative purposes only and
             is not a lender quote or offer of credit. Your actual rate and APR
             may vary based on your financial profile, loan terms, lender,
             property, and market conditions. Principal and interest are only
