@@ -126,7 +126,7 @@ function App() {
       "Current monthly rent": money(rent),
       "Target home price": money(price),
       "Down payment": `${down}%`,
-      "Estimated mortgage Rate": `${rate}%`,
+      "Estimated mortgage rate": `${rate}%`,
       "Property tax": `${taxPct}%/yr`,
       HOA: `${money(hoa)}/mo`,
       "Homeowners insurance": `${insPct}%/yr`,
