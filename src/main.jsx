@@ -118,6 +118,10 @@ function App() {
       "Last name": last,
       email: f.get("email"),
       Phone: f.get("phone"),
+      "Current ZIP / neighborhood": f.get("currentArea"),
+      "Approximate current rate": f.get("currentRate")
+        ? `$${f.get("currentRate")}/mo`
+        : "",
       "Where they want to buy": f.get("area"),
       "When they might buy": f.get("timeline"),
       "What they're looking for": f.get("lookingFor"),
@@ -205,9 +209,9 @@ function App() {
           <I l="Compare over" v={years} set={setYears} s="years" />
           <small>
             Mortgage calculations assume a 30-year fixed-rate mortgage using the
-            estimated rate. The default rate is for illustrative purposes only and
-            is not a lender quote or offer of credit. Your actual rate and APR
-            may vary based on your financial profile, loan terms, lender,
+            estimated rate. The default rate is for illustrative purposes only
+            and is not a lender quote or offer of credit. Your actual rate and
+            APR may vary based on your financial profile, loan terms, lender,
             property, and market conditions. Principal and interest are only
             part of the potential cost of homeownership; property taxes,
             homeowners insurance, flood insurance, HOA or condominium
@@ -310,6 +314,20 @@ function App() {
                     placeholder="Phone"
                     autoComplete="tel"
                   />
+                  <input
+                    name="currentArea"
+                    placeholder="Current ZIP code / neighborhood"
+                  />
+                  <div className="input">
+                    <span className="prefix">$</span>
+                    <input
+                      name="currentRate"
+                      inputMode="numeric"
+                      placeholder="Approximate current rate"
+                      aria-label="Approximate current rate, dollars per month"
+                    />
+                    <span>/mo</span>
+                  </div>
                   <input name="area" placeholder="Where do you want to buy?" />
                   <select name="timeline" defaultValue="">
                     <option value="" disabled>

@@ -93,7 +93,7 @@ label {
   color: #16a34a;
 }
 .red {
-  color: #ce011f
+  color: #ce011f;
 }
 .explain p {
   line-height: 1.5;
@@ -123,6 +123,40 @@ label {
   padding: 11px;
   border: 1px solid #ccc;
   border-radius: 10px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 13.3333px;
+  line-height: normal;
+}
+/* $ … /mo box in the lead form: the border is on the wrapper,
+   so it looks exactly like the plain boxes */
+.lead .input {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 11px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 13.3333px;
+}
+.lead .input input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 11px 0 11px 4px;
+  background: transparent;
+  font: inherit;
+  outline: 0;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.lead .input input::-webkit-outer-spin-button,
+.lead .input input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .lead textarea {
   grid-column: 1/-1;
