@@ -119,7 +119,7 @@ function App() {
       email: f.get("email"),
       Phone: f.get("phone"),
       "Current ZIP / neighborhood": f.get("currentArea"),
-      "Approximate current rate": f.get("currentRate")
+      "Approximate current rent": f.get("currentRate")
         ? `$${f.get("currentRate")}/mo`
         : "",
       "Where they want to buy": f.get("area"),
@@ -323,8 +323,8 @@ function App() {
                     <input
                       name="currentRate"
                       inputMode="numeric"
-                      placeholder="Approximate current rate"
-                      aria-label="Approximate current rate, dollars per month"
+                      placeholder="Approximate current rent"
+                      aria-label="Approximate current rent, dollars per month"
                     />
                     <span>/mo</span>
                   </div>
